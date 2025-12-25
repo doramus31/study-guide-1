@@ -2,53 +2,46 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Study Guide 1</title>
+<title>Study Guide 1 – Lessons 1–16</title>
 
 <style>
-body{
-  font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: Arial, sans-serif;
   max-width: 1000px;
   margin: auto;
   padding: 20px;
-  background: #fafafa;
+  background: #f9f9f9;
 }
 
-section{
-  margin-bottom: 40px;
+h1, h2 {
+  text-align: center;
 }
 
-.question{
-  margin-bottom: 20px;
+.question {
+  margin-bottom: 25px;
   padding: 15px;
   background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,.08);
-}
-
-.answers button{
-  display: block;
-  width: 100%;
-  margin: 6px 0;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
   border-radius: 6px;
+}
+
+.answers label {
+  display: block;
+  padding: 6px;
+  margin: 4px 0;
+  border-radius: 4px;
   cursor: pointer;
-  background: #f2f2f2;
 }
 
-.answers button.correct{
-  background: #c8f7c5;
-  border-color: #2ecc71;
+.correct {
+  background-color: #c8f7c5;
 }
 
-.answers button.wrong{
-  background: #f7c5c5;
-  border-color: #e74c3c;
+.wrong {
+  background-color: #f7c5c5;
 }
 
-.answers button:disabled{
-  cursor: not-allowed;
+input[type="radio"] {
+  margin-right: 8px;
 }
 </style>
 </head>
@@ -56,96 +49,71 @@ section{
 <body>
 
 <h1>Study Guide 1</h1>
-<p>Select an answer. Correct answers turn <b>green</b>. Incorrect answers turn <b>red</b>.</p>
+<h2>Lessons 1–16</h2>
 
-<!-- ================= LESSON 15 ================= -->
-<section>
-<h2>Lesson 15 – Pole Top Rescue</h2>
+<!-- ================= QUESTION EXAMPLE ================= -->
+<div class="question" data-correct="b">
+  <strong>1. Beginning April 1, 2015, qualified workers must use fall protection while climbing or changing locations on poles, towers, or similar structures.</strong>
 
-<div class="question">
-<h3>There are four basic steps in a pole top rescue.</h3>
-<div class="answers">
-<button onclick="check(this,false)">True</button>
-<button onclick="check(this,true)">False</button>
-</div>
-</div>
-
-<div class="question">
-<h3>When there is an injured worker on a pole, the first thing that should be done is?</h3>
-<div class="answers">
-<button onclick="check(this,true)">Call for help</button>
-<button onclick="check(this,false)">Climb to the rescue position</button>
-<button onclick="check(this,false)">Evaluate the situation</button>
-<button onclick="check(this,false)">Prepare to administer CPR</button>
-</div>
+  <div class="answers">
+    <label>
+      <input type="radio" name="q1" value="a">
+      True
+    </label>
+    <label>
+      <input type="radio" name="q1" value="b">
+      False
+    </label>
+  </div>
 </div>
 
-<div class="question">
-<h3>If the victim is no longer in contact with energized conductors, the rescuer should proceed with the rescue.</h3>
-<div class="answers">
-<button onclick="check(this,true)">True</button>
-<button onclick="check(this,false)">False</button>
-</div>
+<div class="question" data-correct="d">
+  <strong>2. OSHA will require all fall arrest equipment to pass a drop test after it is?</strong>
+
+  <div class="answers">
+    <label><input type="radio" name="q2" value="a"> Abraded</label>
+    <label><input type="radio" name="q2" value="b"> Arc tested</label>
+    <label><input type="radio" name="q2" value="c"> Cut</label>
+    <label><input type="radio" name="q2" value="d"> Shock loaded</label>
+  </div>
 </div>
 
-<div class="question">
-<h3>Deciding if rubber gloves are needed for a pole top rescue is part of what?</h3>
-<div class="answers">
-<button onclick="check(this,false)">Assuring ground crew safety</button>
-<button onclick="check(this,false)">Clearing the victim from an energized source</button>
-<button onclick="check(this,true)">Evaluating the situation</button>
-<button onclick="check(this,false)">The job briefing</button>
-</div>
-</div>
-</section>
+<div class="question" data-correct="c">
+  <strong>3. When selecting equipment, the Qualified Electrical Worker should make the selection based on?</strong>
 
-<!-- ================= LESSON 16 ================= -->
-<section>
-<h2>Lesson 16 – Bucket Truck Rescue</h2>
-
-<div class="question">
-<h3>If bucket truck rescue is needed, which statement is correct?</h3>
-<div class="answers">
-<button onclick="check(this,false)">Additional help is required</button>
-<button onclick="check(this,false)">Dielectric boots are mandatory</button>
-<button onclick="check(this,false)">Rubber gloves are not required</button>
-<button onclick="check(this,true)">Time is critical</button>
-</div>
+  <div class="answers">
+    <label><input type="radio" name="q3" value="a"> Best value</label>
+    <label><input type="radio" name="q3" value="b"> Most popular brand</label>
+    <label><input type="radio" name="q3" value="c"> Most suitable for intended work</label>
+    <label><input type="radio" name="q3" value="d"> Use by other crew members</label>
+  </div>
 </div>
 
-<div class="question">
-<h3>Bucket rescue should be carried out in no more than?</h3>
-<div class="answers">
-<button onclick="check(this,true)">4 minutes</button>
-<button onclick="check(this,false)">7 minutes</button>
-<button onclick="check(this,false)">10 minutes</button>
-<button onclick="check(this,false)">12 minutes</button>
-</div>
-</div>
-
-<div class="question">
-<h3>There are four basic reasons a ground crew member may need to help a man out of an elevated bucket.</h3>
-<div class="answers">
-<button onclick="check(this,true)">True</button>
-<button onclick="check(this,false)">False</button>
-</div>
-</div>
-
-<div class="question">
-<h3>The CPR compression to breath ratio is 30 compressions to 2 breaths.</h3>
-<div class="answers">
-<button onclick="check(this,true)">True</button>
-<button onclick="check(this,false)">False</button>
-</div>
-</div>
-</section>
-
+<!-- ================= SCRIPT ================= -->
 <script>
-function check(button, correct){
-  const buttons = button.parentElement.querySelectorAll("button");
-  buttons.forEach(b => b.disabled = true);
-  button.classList.add(correct ? "correct" : "wrong");
-}
+document.querySelectorAll(".question").forEach(question => {
+  const correct = question.dataset.correct;
+
+  question.querySelectorAll("input[type=radio]").forEach(input => {
+    input.addEventListener("change", () => {
+
+      // disable all radios in this question
+      question.querySelectorAll("input").forEach(r => r.disabled = true);
+
+      question.querySelectorAll("label").forEach(label => {
+        const radio = label.querySelector("input");
+
+        if (radio.value === correct) {
+          label.classList.add("correct");
+        }
+
+        if (radio.checked && radio.value !== correct) {
+          label.classList.add("wrong");
+        }
+      });
+    });
+  });
+});
 </script>
 
 </body>
