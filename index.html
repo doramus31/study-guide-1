@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Study Guide 1 – Lessons 1–16</title>
+<title>Study Guide 1</title>
 
 <style>
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 1000px;
   margin: auto;
   padding: 20px;
-  background: #f9f9f9;
+  background: #f7f7f7;
 }
 
 h1, h2 {
@@ -23,25 +23,42 @@ h1, h2 {
   background: #ffffff;
   border-radius: 6px;
 }
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
 
-.answers label {
+.question {
+  margin-bottom: 20px;
+}
+
+.answers button {
   display: block;
-  padding: 6px;
-  margin: 4px 0;
-  border-radius: 4px;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  background: #eee;
   cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
-.correct {
-  background-color: #c8f7c5;
+.answers button:hover {
+  background: #ddd;
 }
 
-.wrong {
-  background-color: #f7c5c5;
+.answers button.correct {
+  background-color: #c8e6c9;
+  border-color: #2e7d32;
+  color: #2e7d32;
 }
 
-input[type="radio"] {
-  margin-right: 8px;
+.answers button.wrong {
+  background-color: #ffcdd2;
+  border-color: #c62828;
+  color: #c62828;
 }
 </style>
 </head>
@@ -49,71 +66,2429 @@ input[type="radio"] {
 <body>
 
 <h1>Study Guide 1</h1>
-<h2>Lessons 1–16</h2>
 
-<!-- ================= QUESTION EXAMPLE ================= -->
-<div class="question" data-correct="b">
-  <strong>1. Beginning April 1, 2015, qualified workers must use fall protection while climbing or changing locations on poles, towers, or similar structures.</strong>
-
+<!-- ================================================= -->
+<!-- 🔽 PASTE LESSON BLOCKS BELOW THIS LINE 🔽 -->
+<!-- ================================================= -->
+<div class="question">
+  <p><strong>1. Apprentices should NOT have the reference open when answering lesson questions.</strong></p>
   <div class="answers">
-    <label>
-      <input type="radio" name="q1" value="a">
-      True
-    </label>
-    <label>
-      <input type="radio" name="q1" value="b">
-      False
-    </label>
+    <button onclick="checkAnswer(this, 0)">True</button>
+    <button onclick="checkAnswer(this, 0)">False</button>
+  </div>
+</div>
+<div class="question">
+  <p><strong>2. Which of the following items should be read first on every lesson?</strong></p>
+  <div class="answers">
+    <button onclick="checkAnswer(this, 1)">a. Reference Material</button>
+    <button onclick="checkAnswer(this, 0)">b. Introductory Information</button>
+    <button onclick="checkAnswer(this, 1)">c. Learning Objectives</button>
+    <button onclick="checkAnswer(this, 1)">d. Question Number 1</button>
+  </div>
+</div>
+  <div class="question">
+  <p><strong>3. Which of the following represents the best method of answering the lesson questions?</strong></p>
+  <div class="answers">
+    <button onclick="checkAnswer(this, 1)">
+      a. Answer all the lesson questions one knows first, then read the reference material.
+    </button>
+    <button onclick="checkAnswer(this, 1)">
+      b. Answer the lesson questions from the reference material as one goes along.
+    </button>
+    <button onclick="checkAnswer(this, 0)">
+      c. Read and study the reference material, then attempt to answer the lesson questions.
+    </button>
+    <button onclick="checkAnswer(this, 1)">
+      d. Read the reference material, then answer only the lesson questions one remembers.
+    </button>
+  </div>
+</div>
+  <div class="question">
+  <p><strong>4. Students should come to class with assigned homework complete and be prepared to participate in class in a number of ways.</strong></p>
+  <div class="answers">
+    <button onclick="checkAnswer(this, 0)">True</button>
+    <button onclick="checkAnswer(this, 1)">False</button>
+  </div>
+</div>
+  <div class="question" data-answer="true">
+  <p><strong>Lesson 1 – Question 5</strong></p>
+  <p>Tests are graded according to a simple percentage.</p>
+
+  <label>
+    <input type="radio" name="l1q5" value="true" onclick="checkAnswer(this)">
+    True
+  </label><br>
+
+  <label>
+    <input type="radio" name="l1q5" value="false" onclick="checkAnswer(this)">
+    False
+  </label>
+</div>
+  <div class="question" data-answer="d">
+  <p><strong>What should an apprentice do if they feel the program is too hard or unfair and are unwilling to dedicate time or ask for help?</strong></p>
+  <button onclick="checkAnswer(this,'a')">a. Bring it up to the apprentice director</button>
+  <button onclick="checkAnswer(this,'b')">b. Bring it up to the business manager</button>
+  <button onclick="checkAnswer(this,'c')">c. Bring it up to the contractor</button>
+  <button onclick="checkAnswer(this,'d')">d. Resign from the program</button>
+</div>
+
+<div class="question" data-answer="d">
+  <p><strong>What is the best option for an apprentice with poor math skills?</strong></p>
+  <button onclick="checkAnswer(this,'a')">a. Ask a fellow apprentice for help</button>
+  <button onclick="checkAnswer(this,'b')">b. Ask the training director for help after class</button>
+  <button onclick="checkAnswer(this,'c')">c. Purchase Math for Dummies</button>
+  <button onclick="checkAnswer(this,'d')">d. Take the electrical training ALLIANCE online math course</button>
+</div>
+
+<div class="question" data-answer="true">
+  <p><strong>A student should read the lesson questions BEFORE reading the lesson reference material.</strong></p>
+  <button onclick="checkAnswer(this,'true')">True</button>
+  <button onclick="checkAnswer(this,'false')">False</button>
+</div>
+
+<div class="question" data-answer="true">
+  <p><strong>A student will NOT learn enough in this course by only looking up answers in the reference and writing them down.</strong></p>
+  <button onclick="checkAnswer(this,'true')">True</button>
+  <button onclick="checkAnswer(this,'false')">False</button>
+</div>
+
+<div class="question" data-answer="d">
+  <p><strong>What happens when a student comes to class with the lessons prepared?</strong></p>
+  <button onclick="checkAnswer(this,'a')">a. Instructor asks for questions and moves on</button>
+  <button onclick="checkAnswer(this,'b')">b. Homework is collected first, then questions</button>
+  <button onclick="checkAnswer(this,'c')">c. Discussion, answers given, homework collected</button>
+  <button onclick="checkAnswer(this,'d')">d. Discussion with explanation of key points and trouble spots</button>
+</div>
+
+<div class="question" data-answer="a">
+  <p><strong>What happens if an apprentice does not meet committee standards by not studying or performing well?</strong></p>
+  <button onclick="checkAnswer(this,'a')">a. The apprentice could be dropped from the program</button>
+  <button onclick="checkAnswer(this,'b')">b. Placed on probation for entire apprenticeship</button>
+  <button onclick="checkAnswer(this,'c')">c. Dropped only during probation</button>
+  <button onclick="checkAnswer(this,'d')">d. Dropped after two years</button>
+</div>
+  <div class="question" data-answer="true">
+  <p><strong>It is important to read and review the introductory statement and the reference in each lesson.</strong></p>
+  <button onclick="checkAnswer(this,'true')">True</button>
+  <button onclick="checkAnswer(this,'false')">False</button>
+</div>
+
+<div class="question" data-answer="d">
+  <p><strong>Which of the following is the suggested method of study after reading each paragraph in the reference text?</strong></p>
+  <button onclick="checkAnswer(this,'a')">a. Highlight the important paragraphs</button>
+  <button onclick="checkAnswer(this,'b')">b. Read each paragraph again</button>
+  <button onclick="checkAnswer(this,'c')">c. Read each paragraph at least three times</button>
+  <button onclick="checkAnswer(this,'d')">d. Think about what you just read</button>
+</div>
+
+<div class="question" data-answer="a">
+  <p><strong>Why is underlining rules, formulas, and important statements in textbooks a good practice?</strong></p>
+  <button onclick="checkAnswer(this,'a')">a. It creates a stronger impression</button>
+  <button onclick="checkAnswer(this,'b')">b. It does not interfere with other text</button>
+  <button onclick="checkAnswer(this,'c')">c. It is easy to find</button>
+  <button onclick="checkAnswer(this,'d')">d. It is visually appealing</button>
+</div>
+
+<div class="question" data-answer="b">
+  <p><strong>When an apprentice specifically studies the _____, he or she will better understand the main topics of the lesson and what is expected.</strong></p>
+  <button onclick="checkAnswer(this,'a')">a. Introductory Information</button>
+  <button onclick="checkAnswer(this,'b')">b. Learning Objectives</button>
+  <button onclick="checkAnswer(this,'c')">c. Lesson Questions</button>
+  <button onclick="checkAnswer(this,'d')">d. Reference Material</button>
+</div>
+
+<div class="question" data-answer="b">
+  <p><strong>Besides asking questions in class, what else can an apprentice do to prevent tests from being too difficult?</strong></p>
+  <button onclick="checkAnswer(this,'a')">a. Read all reference material as many times as possible</button>
+  <button onclick="checkAnswer(this,'b')">b. Study and learn one lesson at a time</button>
+  <button onclick="checkAnswer(this,'c')">c. Study at least four hours before each test</button>
+  <button onclick="checkAnswer(this,'d')">d. Study immediately before school</button>
+</div>
+  <section class="lesson" id="lesson-2">
+  <h2>Lesson 2</h2>
+    <section>
+  <h2>Lesson 2</h2>
+
+  <div class="question">
+    <p><strong>1.</strong> A signed copy of one's Apprenticeship Agreement confirms to the student and others that he or she is a(n) ___ apprentice.</p>
+    <button onclick="check(this,false)">competent</button>
+    <button onclick="check(this,true)">indentured</button>
+    <button onclick="check(this,false)">qualified</button>
+    <button onclick="check(this,false)">skilled</button>
+  </div>
+
+  <div class="question">
+    <p><strong>2.</strong> The ___ will not approve a promotion if the apprentice fails to measure up in all categories to local AJATC ___ and ___.</p>
+    <button onclick="check(this,false)">Committee / codes / rules</button>
+    <button onclick="check(this,true)">Committee / policies / standards</button>
+    <button onclick="check(this,false)">local / practices / standards</button>
+    <button onclick="check(this,false)">union / policies / practices</button>
+  </div>
+
+  <div class="question">
+    <p><strong>3.</strong> Failure to meet apprenticeship obligations will result in the apprentice being ___.</p>
+    <button onclick="check(this,true)">dropped from the program</button>
+    <button onclick="check(this,false)">forced to repeat a year of school</button>
+    <button onclick="check(this,false)">issued a warning notice</button>
+    <button onclick="check(this,false)">subject to a layoff</button>
+  </div>
+
+  <div class="question">
+    <p><strong>4.</strong> Most of those who apply for the apprenticeship program are accepted.</p>
+    <button onclick="check(this,false)">True</button>
+    <button onclick="check(this,true)">False</button>
+  </div>
+
+  <div class="question">
+    <p><strong>5.</strong> The ___ and Local Policy Statement are a part of the Apprenticeship Agreement.</p>
+    <button onclick="check(this,false)">Codes</button>
+    <button onclick="check(this,false)">Contracts</button>
+    <button onclick="check(this,true)">Practices</button>
+    <button onclick="check(this,false)">Standards</button>
+  </div>
+
+  <div class="question">
+    <p><strong>6.</strong> The ___ agrees to make every effort to keep the apprentice employed; however, they cannot ___ employment.</p>
+    <button onclick="check(this,false)">business manager / guarantee</button>
+    <button onclick="check(this,true)">Committee AJATC / guarantee</button>
+    <button onclick="check(this,false)">director / give</button>
+    <button onclick="check(this,false)">president / supply</button>
+  </div>
+</section>
+
+<script>
+function check(button, correct) {
+  const buttons = button.parentElement.querySelectorAll("button");
+
+  buttons.forEach(b => {
+    b.disabled = true;
+    if (b.getAttribute("onclick").includes("true")) {
+      b.style.backgroundColor = "#c8f7c5"; // green correct
+    }
+  });
+
+  if (!correct) {
+    button.style.backgroundColor = "#f7c5c5"; // red wrong
+  }
+}
+</script>
+
+<style>
+.question {
+  margin-bottom: 25px;
+}
+button {
+  display: block;
+  margin: 6px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 600px;
+  cursor: pointer;
+}
+</style>
+<h2>Lesson 2</h2>
+
+<div class="question">
+  <p>1. An Apprenticeship Agreement between the apprentice and the ? must be signed and registered before the apprentice can be given employment or attend classes.</p>
+  <div class="options">
+    <div class="option">a. business manager</div>
+    <div class="option correct">b. Committee - AJATC</div>
+    <div class="option">c. director</div>
+    <div class="option">d. union</div>
   </div>
 </div>
 
-<div class="question" data-correct="d">
-  <strong>2. OSHA will require all fall arrest equipment to pass a drop test after it is?</strong>
-
-  <div class="answers">
-    <label><input type="radio" name="q2" value="a"> Abraded</label>
-    <label><input type="radio" name="q2" value="b"> Arc tested</label>
-    <label><input type="radio" name="q2" value="c"> Cut</label>
-    <label><input type="radio" name="q2" value="d"> Shock loaded</label>
+<div class="question">
+  <p>2. When the student accepted the opportunity of apprenticeship, he or she also accepted the ? of apprenticeship.</p>
+  <div class="options">
+    <div class="option">a. laws</div>
+    <div class="option">b. requirements</div>
+    <div class="option correct">c. responsibilities</div>
+    <div class="option">d. rules</div>
   </div>
+</div>
+
+<div class="question">
+  <p>3. The AJATC is not permitted to extend an apprentice's probation hours beyond the Department of Labor's maximum hours.</p>
+  <div class="options">
+    <div class="option correct">True</div>
+    <div class="option">False</div>
+  </div>
+</div>
+
+<div class="question">
+  <p>4. Apprenticeship standards specify the minimum number of ? required for on-the-job (OJT) training and related instruction.</p>
+  <div class="options">
+    <div class="option correct">a. hours</div>
+    <div class="option">b. days</div>
+    <div class="option">c. months</div>
+    <div class="option">d. years</div>
+  </div>
+</div>
+<h2>Lesson 3</h2>
+    <h2>Lesson 3</h2>
+
+<div class="question" data-correct="a">
+  <p>The initials IBEW represent which organization?</p>
+  <button data-answer="a">International Brotherhood of Electrical Workers</button>
+  <button data-answer="b">International Brotherhood of Elevator Workers</button>
+  <button data-answer="c">International Bureau of Electrical Workers</button>
+  <button data-answer="d">International Electrical Workers Union</button>
 </div>
 
 <div class="question" data-correct="c">
-  <strong>3. When selecting equipment, the Qualified Electrical Worker should make the selection based on?</strong>
+  <p>The initials NECA represent which organization?</p>
+  <button data-answer="a">National Association of Electrical Contractors</button>
+  <button data-answer="b">National Electrical Consumers Association</button>
+  <button data-answer="c">National Electrical Contractors Association</button>
+  <button data-answer="d">National Electrical Contractors of America</button>
+</div>
 
+<div class="question" data-correct="d">
+  <p>One is said to be a ? individual if he or she performs up to expectations.</p>
+  <button data-answer="a">reasonable</button>
+  <button data-answer="b">respectful</button>
+  <button data-answer="c">resourceful</button>
+  <button data-answer="d">responsible</button>
+</div>
+
+<div class="question" data-correct="b">
+  <p>One who is properly ? demonstrates a real interest in his or her work and study.</p>
+  <button data-answer="a">experienced</button>
+  <button data-answer="b">motivated</button>
+  <button data-answer="c">skilled</button>
+  <button data-answer="d">trained</button>
+</div>
+
+<div class="question" data-correct="a">
+  <p>To have the ? to learn and perform is to have the physical and mental ability to learn and to produce.</p>
+  <button data-answer="a">aptitude</button>
+  <button data-answer="b">attitude</button>
+  <button data-answer="c">fortitude</button>
+  <button data-answer="d">latitude</button>
+</div>
+
+<div class="question" data-correct="d">
+  <p>Failure to work on a regular basis and to satisfy classroom requirements shows that one has a lack of ? in the trade.</p>
+  <button data-answer="a">care</button>
+  <button data-answer="b">concern</button>
+  <button data-answer="c">curiosity</button>
+  <button data-answer="d">interest</button>
+</div>
+
+<div class="question" data-correct="c">
+  <p>A competent, skilled Qualified Electrical Worker is one who has ?, ?, and a positive ? for his or her trade.</p>
+  <button data-answer="a">motivation / knowledge / ability</button>
+  <button data-answer="b">personality / knowledge / ability</button>
+  <button data-answer="c">skill / knowledge / attitude</button>
+  <button data-answer="d">skill / motivation / attitude</button>
+</div>
+
+<div class="question" data-correct="a">
+  <p>Apprenticeship exists for the primary purpose of producing competent ? for our industry.</p>
+  <button data-answer="a">craftspeople</button>
+  <button data-answer="b">electrical estimators</button>
+  <button data-answer="c">foremen</button>
+  <button data-answer="d">laborers</button>
+</div>
+    <div class="question" data-correct="b">
+  <p>The ? is responsible for the amount of knowledge acquired during the term of apprenticeship.</p>
+  <button data-answer="a">AJATC</button>
+  <button data-answer="b">apprentice</button>
+  <button data-answer="c">director of the apprentice school</button>
+  <button data-answer="d">instructor</button>
+</div>
+
+<div class="question" data-correct="b">
+  <p>Who will determine whether or not an apprentice succeeds in becoming a Journeyman Electrical Worker?</p>
+  <button data-answer="a">The AJATC</button>
+  <button data-answer="b">The apprentice</button>
+  <button data-answer="c">The apprentice school</button>
+  <button data-answer="d">The director of the apprentice school</button>
+</div>
+
+<div class="question" data-correct="a">
+  <p>The ? is responsible for establishing rules, policies, and standards.</p>
+  <button data-answer="a">AJATC</button>
+  <button data-answer="b">apprentice school</button>
+  <button data-answer="c">director of the apprentice school</button>
+  <button data-answer="d">union</button>
+</div>
+
+<div class="question" data-correct="a">
+  <p>The ? has the responsibility and authority to terminate an apprenticeship if the apprentice does not comply with rules, policies, and procedures.</p>
+  <button data-answer="a">AJATC</button>
+  <button data-answer="b">apprentice</button>
+  <button data-answer="c">apprentice school</button>
+  <button data-answer="d">director of the apprentice school</button>
+</div>
+
+<div class="question" data-correct="c">
+  <p>We must all work to satisfy the ?.</p>
+  <button data-answer="a">AJATC</button>
+  <button data-answer="b">contractor</button>
+  <button data-answer="c">customer</button>
+  <button data-answer="d">director of apprenticeship</button>
+</div>
+
+<div class="question" data-correct="c">
+  <p>? satisfaction ensures more jobs in the future.</p>
+  <button data-answer="a">AJATC</button>
+  <button data-answer="b">Contractor</button>
+  <button data-answer="c">Customer</button>
+  <button data-answer="d">Director of apprenticeship</button>
+</div>
+
+<div class="question" data-correct="a">
+  <p>Which type of person should you strive to be throughout your apprenticeship and your career as a Qualified Electrical Worker?</p>
+  <button data-answer="a">The kind of person who will always be productive on the job and in class.</button>
+  <button data-answer="b">The kind of person who usually is productive and reliable.</button>
+  <button data-answer="c">The kind of person who will perform when the rules require me to do so.</button>
+  <button data-answer="d">The kind of person who, if pressured, will generally comply with policies.</button>
+  <button data-answer="e">The kind of person who never sees the need for rules and policies.</button>
+</div>
+    <section class="lesson">
+  <h2>Lesson 4</h2>
+
+  <!-- Question 1 -->
+  <div class="question" data-correct="c">
+    <p>1. The construction industry employs about ___ of all the workers in the U.S.A.</p>
+    <button data-option="a">3%</button>
+    <button data-option="b">5%</button>
+    <button data-option="c">8%</button>
+    <button data-option="d">12%</button>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="question" data-correct="true">
+    <p>2. Lowering the prime interest rate can lead to increased employment.</p>
+    <button data-option="true">True</button>
+    <button data-option="false">False</button>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="question" data-correct="c">
+    <p>3. The ___ of construction workers is one of the most critical factors in shaping our economy.</p>
+    <button data-option="a">Productivity</button>
+    <button data-option="b">Quality</button>
+    <button data-option="c">Quantity</button>
+    <button data-option="d">Wages</button>
+  </div>
+
+  <!-- Question 4 -->
+  <div class="question" data-correct="c">
+    <p>4. The construction industry is projected to expand by nearly ___ annually.</p>
+    <button data-option="a">3%</button>
+    <button data-option="b">5%</button>
+    <button data-option="c">10%</button>
+    <button data-option="d">12%</button>
+  </div>
+
+  <!-- Question 5 -->
+  <div class="question" data-correct="true">
+    <p>5. Over 10% of the total construction workforce is employed by electrical contractors.</p>
+    <button data-option="true">True</button>
+    <button data-option="false">False</button>
+  </div>
+
+  <!-- Question 6 -->
+  <div class="question" data-correct="a">
+    <p>6. Quality performance by skilled Qualified Electrical Workers is essential to ensuring Americans continue to have a high standard of living and ___.</p>
+    <button data-option="a">Maintaining a nation that runs on electricity</button>
+    <button data-option="b">Preventing layoffs</button>
+    <button data-option="c">Safeguarding the reliable system important to banks</button>
+    <button data-option="d">Using UPS systems limited to only one hour</button>
+  </div>
+
+  <!-- Question 7 -->
+  <div class="question" data-correct="b">
+    <p>7. America may be facing not only a ___ of labor, but also a shortage of ___ labor.</p>
+    <button data-option="a">Shortage / low wage</button>
+    <button data-option="b">Shortage / skilled</button>
+    <button data-option="c">Surplus / skilled</button>
+    <button data-option="d">Surplus / young</button>
+  </div>
+
+  <!-- Question 8 -->
+  <div class="question" data-correct="d">
+    <p>8. Of the thousands of electrical contractors who run union shops in the U.S., over ___ once worked at the trade.</p>
+    <button data-option="a">20%</button>
+    <button data-option="b">40%</button>
+    <button data-option="c">60%</button>
+    <button data-option="d">80%</button>
+  </div>
+
+  <!-- Question 9 -->
+  <div class="question" data-correct="a">
+    <p>9. Two things a Qualified Electrical Worker must have to succeed are technical know-how and ___.</p>
+    <button data-option="a">Striving to be an asset to the contractor</button>
+    <button data-option="b">Striving to become a union steward</button>
+    <button data-option="c">Striving to become an AJATC instructor</button>
+    <button data-option="d">Striving to become a single-segment expert</button>
+  </div>
+
+  <!-- Question 10 -->
+  <div class="question" data-correct="b">
+    <p>10. Opportunity in the electrical construction industry exists due to a ___ effort by IBEW and ___.</p>
+    <button data-option="a">Cooperative / AJATC</button>
+    <button data-option="b">Cooperative / NECA</button>
+    <button data-option="c">Generous / IAEI</button>
+    <button data-option="d">Generous / UL</button>
+  </div>
+
+  <!-- Question 11 -->
+  <div class="question" data-correct="d">
+    <p>11. Why should the apprentice appreciate contractors?</p>
+    <button data-option="a">Because the apprentice needs a paycheck</button>
+    <button data-option="b">Because happy contractors mean happy apprentices</button>
+    <button data-option="c">Because many workers do not appreciate contractors</button>
+    <button data-option="d">Because the apprentice’s future is tied to contractor success</button>
+  </div>
+
+  <!-- Question 12 -->
+  <div class="question" data-correct="d">
+    <p>12. Which two steps must a contractor complete before going into business?</p>
+    <button data-option="a">Experience / join NECA</button>
+    <button data-option="b">College degree / obtain jobs</button>
+    <button data-option="c">Join NECA / skilled labor</button>
+    <button data-option="d">Obtain jobs / skilled labor</button>
+  </div>
+
+  <!-- Question 13 -->
+  <div class="question" data-correct="c">
+    <p>13. Which step supports the IBEW?</p>
+    <button data-option="a">Buying equipment</button>
+    <button data-option="b">Hiring supervisors</button>
+    <button data-option="c">Obtaining skilled labor</button>
+    <button data-option="d">Obtaining jobs</button>
+  </div>
+
+  <!-- Question 14 -->
+  <div class="question" data-correct="false">
+    <p>14. Labor relations must be studied in college before becoming a contractor.</p>
+    <button data-option="true">True</button>
+    <button data-option="false">False</button>
+  </div>
+
+  <!-- Question 15 -->
+  <div class="question" data-correct="d">
+    <p>15. Overhead costs include financing, obtaining jobs, and ___.</p>
+    <button data-option="a">Labor / equipment</button>
+    <button data-option="b">Labor / materials</button>
+    <button data-option="c">Jobs / materials</button>
+    <button data-option="d">Supervisory and nonproductive help</button>
+  </div>
+
+  <!-- Question 16 -->
+  <div class="question" data-correct="c">
+    <p>16. Electrical job pricing includes labor, material, ___, and ___.</p>
+    <button data-option="a">Education / overhead</button>
+    <button data-option="b">Insurance / profit</button>
+    <button data-option="c">Overhead / profit</button>
+    <button data-option="d">Vacation / education</button>
+  </div>
+
+  <!-- Question 17 -->
+  <div class="question" data-correct="e">
+    <p>17. Why is management interested in apprentice training?</p>
+    <button data-option="a">Less competitive bids</button>
+    <button data-option="b">Higher labor costs</button>
+    <button data-option="c">Less productive supervision</button>
+    <button data-option="d">Unqualified labor is a burden</button>
+    <button data-option="e">All of the above</button>
+  </div>
+
+  <!-- Question 18 -->
+  <div class="question" data-correct="true">
+    <p>18. An IBEW member should be a good sales representative for union labor.</p>
+    <button data-option="true">True</button>
+    <button data-option="false">False</button>
+  </div>
+
+  <!-- Question 19 -->
+  <div class="question" data-correct="true">
+    <p>19. An IBEW member should be productive every day and well trained.</p>
+    <button data-option="true">True</button>
+    <button data-option="false">False</button>
+  </div>
+</section>
+    <section id="lesson5">
+  <h2>Lesson 5 – Safety Fundamentals</h2>
+
+  <!-- Question Template -->
+  <div class="question" data-correct="b">
+    <p><strong>1.</strong> Increased training and emphasis placed on safety and safe practices have caused an improvement in ?</p>
+    <label><input type="radio" name="q5_1" value="a"> government agencies</label>
+    <label><input type="radio" name="q5_1" value="b"> safety standards</label>
+    <label><input type="radio" name="q5_1" value="c"> tool manufacture</label>
+    <label><input type="radio" name="q5_1" value="d"> wages and benefits</label>
+  </div>
+
+  <div class="question" data-correct="true">
+    <p><strong>2.</strong> Human compassion, and the fact that accidents cost money, are two reasons employers do not want accidents to happen.</p>
+    <label><input type="radio" name="q5_2" value="true"> True</label>
+    <label><input type="radio" name="q5_2" value="false"> False</label>
+  </div>
+
+  <div class="question" data-correct="false">
+    <p><strong>3.</strong> A large number of minor accidents do not indicate something is wrong.</p>
+    <label><input type="radio" name="q5_3" value="true"> True</label>
+    <label><input type="radio" name="q5_3" value="false"> False</label>
+  </div>
+
+  <div class="question" data-correct="a">
+    <p><strong>4.</strong> If a company experiences a large number of minor accidents, it should ?</p>
+    <label><input type="radio" name="q5_4" value="a"> check its operations</label>
+    <label><input type="radio" name="q5_4" value="b"> discipline the employees responsible</label>
+    <label><input type="radio" name="q5_4" value="c"> review its safety handbook</label>
+    <label><input type="radio" name="q5_4" value="d"> stop operations</label>
+  </div>
+
+  <div class="question" data-correct="false">
+    <p><strong>5.</strong> Through safety education, a well-organized safety program is all that is needed to reduce accidents.</p>
+    <label><input type="radio" name="q5_5" value="true"> True</label>
+    <label><input type="radio" name="q5_5" value="false"> False</label>
+  </div>
+
+  <div class="question" data-correct="false">
+    <p><strong>6.</strong> If a large number of minor accidents occur, one can logically assume that a major accident will not take place.</p>
+    <label><input type="radio" name="q5_6" value="true"> True</label>
+    <label><input type="radio" name="q5_6" value="false"> False</label>
+  </div>
+
+  <div class="question" data-correct="b">
+    <p><strong>7.</strong> When unusual hazards occur on a job not covered by safety rules, safety planning should take place between the ? and workmen.</p>
+    <label><input type="radio" name="q5_7" value="a"> engineer</label>
+    <label><input type="radio" name="q5_7" value="b"> foreman</label>
+    <label><input type="radio" name="q5_7" value="c"> line superintendent</label>
+    <label><input type="radio" name="q5_7" value="d"> safety director</label>
+  </div>
+
+  <div class="question" data-correct="c">
+    <p><strong>8.</strong> Most accidents are caused by ?</p>
+    <label><input type="radio" name="q5_8" value="a"> defective equipment</label>
+    <label><input type="radio" name="q5_8" value="b"> fatigue</label>
+    <label><input type="radio" name="q5_8" value="c"> human failure</label>
+    <label><input type="radio" name="q5_8" value="d"> poor engineering</label>
+  </div>
+
+  <div class="question" data-correct="b">
+    <p><strong>9.</strong> Causes of accidents fall into ? categories.</p>
+    <label><input type="radio" name="q5_9" value="a"> 2</label>
+    <label><input type="radio" name="q5_9" value="b"> 3</label>
+    <label><input type="radio" name="q5_9" value="c"> 5</label>
+    <label><input type="radio" name="q5_9" value="d"> 8</label>
+  </div>
+
+  <div class="question" data-correct="a">
+    <p><strong>10.</strong> The person with the responsibility for instructing workers and insisting that they observe safety rules is the ?</p>
+    <label><input type="radio" name="q5_10" value="a"> foreman</label>
+    <label><input type="radio" name="q5_10" value="b"> HR director</label>
+    <label><input type="radio" name="q5_10" value="c"> safety director</label>
+    <label><input type="radio" name="q5_10" value="d"> training director</label>
+  </div>
+
+</section>
+    <div class="question" data-correct="true">
+  <p><strong>11.</strong> Among other responsibilities, the apprentice is accountable for improving job safety.</p>
+  <label><input type="radio" name="q5_11" value="true"> True</label>
+  <label><input type="radio" name="q5_11" value="false"> False</label>
+</div>
+
+<div class="question" data-correct="false">
+  <p><strong>12.</strong> Engaging in practical jokes on the job is allowed as long as it is not around energized equipment.</p>
+  <label><input type="radio" name="q5_12" value="true"> True</label>
+  <label><input type="radio" name="q5_12" value="false"> False</label>
+</div>
+
+<div class="question" data-correct="false">
+  <p><strong>13.</strong> Most accidents are unavoidable; that is why they are called accidents.</p>
+  <label><input type="radio" name="q5_13" value="true"> True</label>
+  <label><input type="radio" name="q5_13" value="false"> False</label>
+</div>
+
+<div class="question" data-correct="b">
+  <p><strong>14.</strong> Because the safety of the individual and the crew would be jeopardized, a person who is or has been drinking alcohol should ?</p>
+  <label><input type="radio" name="q5_14" value="a"> be kept in the truck until sober</label>
+  <label><input type="radio" name="q5_14" value="b"> not be permitted on the job</label>
+  <label><input type="radio" name="q5_14" value="c"> work from a bucket only</label>
+  <label><input type="radio" name="q5_14" value="d"> work on the ground only</label>
+</div>
+
+<div class="question" data-correct="c">
+  <p><strong>15.</strong> If safety instructions state that something SHALL be done, this means it is ?</p>
+  <label><input type="radio" name="q5_15" value="a"> a strong suggestion</label>
+  <label><input type="radio" name="q5_15" value="b"> advisable</label>
+  <label><input type="radio" name="q5_15" value="c"> mandatory</label>
+  <label><input type="radio" name="q5_15" value="d"> recommended</label>
+</div>
+
+<div class="question" data-correct="c">
+  <p><strong>16.</strong> If safety instructions state that something SHOULD be done, this means it is ?</p>
+  <label><input type="radio" name="q5_16" value="a"> necessary</label>
+  <label><input type="radio" name="q5_16" value="b"> optional</label>
+  <label><input type="radio" name="q5_16" value="c"> recommended</label>
+  <label><input type="radio" name="q5_16" value="d"> required</label>
+</div>
+
+<div class="question" data-correct="d">
+  <p><strong>17.</strong> In order to deenergize a line, a Qualified Electrical Worker normally has to secure a ?</p>
+  <label><input type="radio" name="q5_17" value="a"> clearance</label>
+  <label><input type="radio" name="q5_17" value="b"> engineer’s permit</label>
+  <label><input type="radio" name="q5_17" value="c"> tagout permit</label>
+  <label><input type="radio" name="q5_17" value="d"> work order</label>
+</div>
+
+<div class="question" data-correct="c">
+  <p><strong>18.</strong> In order to deenergize a line, a Qualified Electrical Worker normally has to secure a ?</p>
+  <label><input type="radio" name="q5_18" value="a"> clearance</label>
+  <label><input type="radio" name="q5_18" value="b"> engineer’s permit</label>
+  <label><input type="radio" name="q5_18" value="c"> tagout permit</label>
+  <label><input type="radio" name="q5_18" value="d"> work order</label>
+</div>
+
+<div class="question" data-correct="a">
+  <p><strong>19.</strong> The term “high voltage” shall mean any voltage over ?</p>
+  <label><input type="radio" name="q5_19" value="a"> 600 V</label>
+  <label><input type="radio" name="q5_19" value="b"> 1,000 V</label>
+  <label><input type="radio" name="q5_19" value="c"> 2,400 V</label>
+  <label><input type="radio" name="q5_19" value="d"> 4,160 V</label>
+</div>
+
+<div class="question" data-correct="false">
+  <p><strong>20.</strong> One way for apprentice Electrical Workers to become competent or qualified is to work above their classification whenever the situation allows.</p>
+  <label><input type="radio" name="q5_20" value="true"> True</label>
+  <label><input type="radio" name="q5_20" value="false"> False</label>
+</div>
+
+<div class="question" data-correct="a">
+  <p><strong>21.</strong> After lines and equipment are deenergized, they must be tested and ? before they are considered dead.</p>
+  <label><input type="radio" name="q5_21" value="a"> grounded</label>
+  <label><input type="radio" name="q5_21" value="b"> tagged out</label>
+  <label><input type="radio" name="q5_21" value="c"> traced back to an open point</label>
+  <label><input type="radio" name="q5_21" value="d"> under lockout/tagout</label>
+</div>
+
+<div class="question" data-correct="true">
+  <p><strong>22.</strong> While performing live-line work, conversation should be limited to matters concerning work only.</p>
+  <label><input type="radio" name="q5_22" value="true"> True</label>
+  <label><input type="radio" name="q5_22" value="false"> False</label>
+</div>
+
+<div class="question" data-correct="false">
+  <p><strong>23.</strong> Most employers permit horseplay on the job after the hot work is completed.</p>
+  <label><input type="radio" name="q5_23" value="true"> True</label>
+  <label><input type="radio" name="q5_23" value="false"> False</label>
+</div>
+
+<div class="question" data-correct="d">
+  <p><strong>24.</strong> The ability to work with other people in harmony is known as ?</p>
+  <label><input type="radio" name="q5_24" value="a"> joint effort</label>
+  <label><input type="radio" name="q5_24" value="b"> mutual aid</label>
+  <label><input type="radio" name="q5_24" value="c"> partnership</label>
+  <label><input type="radio" name="q5_24" value="d"> teamwork</label>
+</div>
+
+<div class="question" data-correct="true">
+  <p><strong>25.</strong> Keeping the job accident free is advantageous to both you and your employer.</p>
+  <label><input type="radio" name="q5_25" value="true"> True</label>
+  <label><input type="radio" name="q5_25" value="false"> False</label>
+</div>
+
+<div class="question" data-correct="d">
+  <p><strong>26.</strong> OSHA regulates electric power generation, transmission, and distribution through the regulations at 29 CFR ?</p>
+  <label><input type="radio" name="q5_26" value="a"> 1910</label>
+  <label><input type="radio" name="q5_26" value="b"> 1910.05</label>
+  <label><input type="radio" name="q5_26" value="c"> 1910.135</label>
+  <label><input type="radio" name="q5_26" value="d"> 1910.269</label>
+</div>
+
+<div class="question" data-correct="d">
+  <p><strong>27.</strong> The ? electricity must be a main point of emphasis for any company or safety program.</p>
+  <label><input type="radio" name="q5_27" value="a"> contact with</label>
+  <label><input type="radio" name="q5_27" value="b"> fear of</label>
+  <label><input type="radio" name="q5_27" value="c"> recognition of</label>
+  <label><input type="radio" name="q5_27" value="d"> respect for</label>
+</div>
+
+<div class="question" data-correct="b">
+  <p><strong>28.</strong> Safety is a thought process and should never be allowed to become a ?</p>
+  <label><input type="radio" name="q5_28" value="a"> afterthought</label>
+  <label><input type="radio" name="q5_28" value="b"> mechanical process</label>
+  <label><input type="radio" name="q5_28" value="c"> mindless act</label>
+  <label><input type="radio" name="q5_28" value="d"> secondary process</label>
+</div>
+    <section class="lesson">
+  <h2>Lesson 7 – Hand Tools Safety</h2>
+
+  <!-- Question 7.1 -->
+  <div class="question" data-answer="d">
+    <p>Accidents associated with hand tools account for ? of cases per 10,000 workers.</p>
+    <button data-choice="a">8</button>
+    <button data-choice="b">15.7</button>
+    <button data-choice="c">20.5</button>
+    <button data-choice="d">25.5</button>
+  </div>
+
+  <!-- Question 7.2 -->
+  <div class="question" data-answer="false">
+    <p>The safest way to cut with a knife is to cut toward the body.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <!-- Question 7.3 -->
+  <div class="question" data-answer="false">
+    <p>Using one socket handle with adaptors for different drives is best practice.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <!-- Question 7.4 -->
+  <div class="question" data-answer="false">
+    <p>Tool placement in body belts is not an issue since tools cannot contact energized parts.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <!-- Question 7.5 -->
+  <div class="question" data-answer="d">
+    <p>All tools must be kept in good condition and restricted to:</p>
+    <button data-choice="a">Calibrated weekly</button>
+    <button data-choice="b">Withstanding short circuits</button>
+    <button data-choice="c">IEEE approval</button>
+    <button data-choice="d">Their intended use</button>
+  </div>
+
+  <!-- Question 7.6 -->
+  <div class="question" data-answer="a">
+    <p>A chisel is unsafe if it has a:</p>
+    <button data-choice="a">Mushroomed head</button>
+    <button data-choice="b">Oval blade</button>
+    <button data-choice="c">Stress line</button>
+    <button data-choice="d">Uninsulated handle</button>
+  </div>
+
+  <!-- Question 7.7 -->
+  <div class="question" data-answer="c">
+    <p>Sharp tools must be covered with ? guards.</p>
+    <button data-choice="a">Warning</button>
+    <button data-choice="b">Metal contoured</button>
+    <button data-choice="c">Protective</button>
+    <button data-choice="d">Rubber</button>
+  </div>
+
+  <!-- Question 7.8 -->
+  <div class="question" data-answer="c">
+    <p>Unless protected, sharp tools shall not be carried in:</p>
+    <button data-choice="a">Goody bags</button>
+    <button data-choice="b">Canvas bags</button>
+    <button data-choice="c">Pockets</button>
+    <button data-choice="d">Tool belts</button>
+  </div>
+
+  <!-- Question 7.9 -->
+  <div class="question" data-answer="b">
+    <p>The ? of impact tools is to be avoided.</p>
+    <button data-choice="a">Detonation</button>
+    <button data-choice="b">Mushrooming</button>
+    <button data-choice="c">Overhead use</button>
+    <button data-choice="d">Steel contact</button>
+  </div>
+
+  <!-- Question 7.10 -->
+  <div class="question" data-answer="c">
+    <p>Which tape measure is prohibited near energized equipment?</p>
+    <button data-choice="a">Fiberglass</button>
+    <button data-choice="b">Laser</button>
+    <button data-choice="c">Metal</button>
+    <button data-choice="d">Wooden</button>
+  </div>
+
+  <!-- Question 7.11 -->
+  <div class="question" data-answer="a">
+    <p>Wrenches shall never be used:</p>
+    <button data-choice="a">As a hammer</button>
+    <button data-choice="b">As leveling devices</button>
+    <button data-choice="c">On difficult bolts</button>
+    <button data-choice="d">On five-sided nuts</button>
+  </div>
+
+  <!-- Question 7.12 -->
+  <div class="question" data-answer="false">
+    <p>A pipe may be used to extend a wrench handle.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <!-- Question 7.13 -->
+  <div class="question" data-answer="d">
+    <p>What can be placed between a jack and load to prevent slipping?</p>
+    <button data-choice="a">Aluminum</button>
+    <button data-choice="b">Plastic</button>
+    <button data-choice="c">Steel</button>
+    <button data-choice="d">Wood</button>
+  </div>
+
+  <!-- Question 7.14 -->
+  <div class="question" data-answer="b">
+    <p>A sledge is unusable with a ? head.</p>
+    <button data-choice="a">Flat</button>
+    <button data-choice="b">Rounded</button>
+    <button data-choice="c">Soft</button>
+    <button data-choice="d">Tempered</button>
+  </div>
+
+  <!-- Question 7.15 -->
+  <div class="question" data-answer="a">
+    <p>A screwdriver shall not be used as a punch or a:</p>
+    <button data-choice="a">Chisel</button>
+    <button data-choice="b">Drift pin</button>
+    <button data-choice="c">Rescue tool</button>
+    <button data-choice="d">Support</button>
+  </div>
+
+  <!-- Question 7.16 -->
+  <div class="question" data-answer="false">
+    <p>Files may be struck with a hammer if extra pressure is needed.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <!-- Question 7.17 -->
+  <div class="question" data-answer="true">
+    <p>Ensure others are clear of the backswing when using a sledge hammer.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <!-- Question 7.18 -->
+  <div class="question" data-answer="c">
+    <p>Side-cutting pliers should never be used as a:</p>
+    <button data-choice="a">Bolt holder</button>
+    <button data-choice="b">Cable cutter</button>
+    <button data-choice="c">Hammer</button>
+    <button data-choice="d">Wire stripper</button>
+  </div>
+
+  <!-- Question 7.19 -->
+  <div class="question" data-answer="true">
+    <p>Tools not in use shall be returned to storage.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <!-- Question 7.20 -->
+  <div class="question" data-answer="a">
+    <p>Tools shall not be left on a structure, ?, or scaffold.</p>
+    <button data-choice="a">Ladder</button>
+    <button data-choice="b">Storage area</button>
+    <button data-choice="c">Toolbox</button>
+    <button data-choice="d">Vehicle</button>
+  </div>
+
+  <!-- Question 7.21 -->
+  <div class="question" data-answer="false">
+    <p>Plastic-dipped handles provide electrical insulation.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <!-- Question 7.22 -->
+  <div class="question" data-answer="b">
+    <p>Tool hazards include danger from action and from:</p>
+    <button data-choice="a">Age</button>
+    <button data-choice="b">Power sources</button>
+    <button data-choice="c">Pinch points</button>
+    <button data-choice="d">Wrong tool</button>
+  </div>
+
+  <!-- Question 7.23 -->
+  <div class="question" data-answer="c">
+    <p>The greatest hazards from hand tools are:</p>
+    <button data-choice="a">Electrical faults</button>
+    <button data-choice="b">GFCIs</button>
+    <button data-choice="c">Improper use & maintenance</button>
+    <button data-choice="d">Hydraulic tools</button>
+  </div>
+
+  <!-- Question 7.24 -->
+  <div class="question" data-answer="true">
+    <p>Electric power tools should always use a 3-wire grounded cord.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <!-- Question 7.25 -->
+  <div class="question" data-answer="a">
+    <p>Cable cutters should be adjusted and lubricated:</p>
+    <button data-choice="a">Daily</button>
+    <button data-choice="b">Weekly</button>
+    <button data-choice="c">Bimonthly</button>
+    <button data-choice="d">Monthly</button>
+  </div>
+
+</section>
+    <section class="lesson">
+  <h2>Lesson 8 – OSHA Act & Regulations</h2>
+
+  <div class="question" data-answer="b">
+    <p>The OSHA Act was signed into law in ?.</p>
+    <button data-choice="a">1960</button>
+    <button data-choice="b">1970</button>
+    <button data-choice="c">1980</button>
+    <button data-choice="d">1982</button>
+  </div>
+
+  <div class="question" data-answer="false">
+    <p>The purpose of the OSHA Act is to provide every working man and woman in the Nation with a guaranteed safe and healthful workplace.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <div class="question" data-answer="a">
+    <p>The ultimate goal of OSHA is to reduce injuries, illnesses, and death of workers to ?.</p>
+    <button data-choice="a">0%</button>
+    <button data-choice="b">5%</button>
+    <button data-choice="c">10%</button>
+    <button data-choice="d">12.5%</button>
+  </div>
+
+  <div class="question" data-answer="a">
+    <p>It is the purpose and policy of the ? to: “Assure as far as possible every working man and woman in the Nation, safe and healthful working conditions.”</p>
+    <button data-choice="a">Congress</button>
+    <button data-choice="b">House of Representatives</button>
+    <button data-choice="c">President</button>
+    <button data-choice="d">Senate</button>
+  </div>
+
+  <div class="question" data-answer="b">
+    <p>There are two types of variances that can be issued by OSHA to an employer; these are temporary and ?.</p>
+    <button data-choice="a">Annual</button>
+    <button data-choice="b">Permanent</button>
+    <button data-choice="c">Renewable</button>
+    <button data-choice="d">Variable</button>
+  </div>
+
+  <div class="question" data-answer="a">
+    <p>The OSH Act covers workers employed in ?.</p>
+    <button data-choice="a">Charity and disaster relief</button>
+    <button data-choice="b">Family farms with no outside employees</button>
+    <button data-choice="c">Self-employed businesses</button>
+    <button data-choice="d">State and local government</button>
+  </div>
+
+  <div class="question" data-answer="c">
+    <p>According to OSHA, the employer is NOT responsible for ?.</p>
+    <button data-choice="a">Evaluating workplace conditions</button>
+    <button data-choice="b">Minimizing or eliminating potential hazards</button>
+    <button data-choice="c">Providing yearly physicals</button>
+    <button data-choice="d">Warning employees of potential hazards</button>
+  </div>
+
+  <div class="question" data-answer="true">
+    <p>The OSHA poster #3165 “It’s the Law” is required to be posted in a prominent location for access by all of the workers.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <div class="question" data-answer="b">
+    <p>Under OSHA regulations, the employee is not responsible for ?.</p>
+    <button data-choice="a">Complying with all OSHA standards</button>
+    <button data-choice="b">Paying fines from OSHA citations</button>
+    <button data-choice="c">Reading the “It’s the Law” poster</button>
+    <button data-choice="d">Reporting hazardous conditions to the supervisor</button>
+  </div>
+
+  <div class="question" data-answer="a">
+    <p>All employers must report to OSHA any workplace incident that results in an employee's fatality within ?.</p>
+    <button data-choice="a">8 hours</button>
+    <button data-choice="b">24 hours</button>
+    <button data-choice="c">48 hours</button>
+    <button data-choice="d">7 days</button>
+  </div>
+
+  <div class="question" data-answer="b">
+    <p>OSHA has the legal authority to, without delay, and at reasonable times ?.</p>
+    <button data-choice="a">Arrest any employer or worker</button>
+    <button data-choice="b">Inspect and investigate any place of employment</button>
+    <button data-choice="c">Stop work on any job site</button>
+    <button data-choice="d">Sue any employer or worker</button>
+  </div>
+
+  <div class="question" data-answer="d">
+    <p>Upon arrival to perform a worksite inspection, an OSHA inspector’s first step is to ?.</p>
+    <button data-choice="a">Hold a closing conference</button>
+    <button data-choice="b">Hold an opening conference</button>
+    <button data-choice="c">Perform a walk around</button>
+    <button data-choice="d">Present his or her credentials</button>
+  </div>
+
+  <div class="question" data-answer="c">
+    <p>OSHA has ? in which to complete an investigation.</p>
+    <button data-choice="a">2 months</button>
+    <button data-choice="b">4 months</button>
+    <button data-choice="c">6 months</button>
+    <button data-choice="d">8 months</button>
+  </div>
+
+  <div class="question" data-answer="d">
+    <p>A violation that has a substantial probability to cause death or severe physical harm is called a(n) ? violation.</p>
+    <button data-choice="a">Aggravated</button>
+    <button data-choice="b">Failure to abate</button>
+    <button data-choice="c">Flagrant</button>
+    <button data-choice="d">Serious</button>
+  </div>
+
+  <div class="question" data-answer="a">
+    <p>When an employer fails to correct a previously cited OSHA violation, it is called a failure to ?.</p>
+    <button data-choice="a">Abate</button>
+    <button data-choice="b">Act</button>
+    <button data-choice="c">Enforce</button>
+    <button data-choice="d">Respond</button>
+  </div>
+
+  <div class="question" data-answer="true">
+    <p>An employee representative is permitted to participate during an on-site OSHA inspection.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <div class="question" data-answer="false">
+    <p>The OSHA compliance officer determines the amount of proposed fines.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <div class="question" data-answer="true">
+    <p>Every employer covered by the OSH Act must comply with OSHA standards.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <div class="question" data-answer="false">
+    <p>Employers are not required to provide OSHA-required training.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <div class="question" data-answer="b">
+    <p>An employer may not ? against a worker exercising OSHA rights.</p>
+    <button data-choice="a">Act</button>
+    <button data-choice="b">Discriminate</button>
+    <button data-choice="c">React negatively</button>
+    <button data-choice="d">Show favoritism</button>
+  </div>
+
+  <div class="question" data-answer="c">
+    <p>A worker must contact OSHA within ? if they believe they were discriminated against.</p>
+    <button data-choice="a">10 days</button>
+    <button data-choice="b">20 days</button>
+    <button data-choice="c">30 days</button>
+    <button data-choice="d">45 days</button>
+  </div>
+
+  <div class="question" data-answer="true">
+    <p>The OSH Act was passed due to high workplace injury and death rates.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <div class="question" data-answer="c">
+    <p>Before OSHA, job-related accidents caused nearly ? deaths per year.</p>
+    <button data-choice="a">5,000</button>
+    <button data-choice="b">10,000</button>
+    <button data-choice="c">14,000</button>
+    <button data-choice="d">25,000</button>
+  </div>
+
+  <div class="question" data-answer="b">
+    <p>OSHA divides the United States into ? regions.</p>
+    <button data-choice="a">5</button>
+    <button data-choice="b">10</button>
+    <button data-choice="c">15</button>
+    <button data-choice="d">16</button>
+  </div>
+
+  <div class="question" data-answer="a">
+    <p>The person in charge of an OSHA area office is the ?.</p>
+    <button data-choice="a">Area Director</button>
+    <button data-choice="b">Area Manager</button>
+    <button data-choice="c">Compliance Officer</button>
+    <button data-choice="d">Inspector General</button>
+  </div>
+
+  <div class="question" data-answer="true">
+    <p>NFPA 70 (National Electrical Code®) is a consensus safety standard.</p>
+    <button data-choice="true">True</button>
+    <button data-choice="false">False</button>
+  </div>
+
+  <div class="question" data-answer="b">
+    <p>The OSHA standard covering construction of overhead transmission lines is 29 CFR ?.</p>
+    <button data-choice="a">1915</button>
+    <button data-choice="b">1926</button>
+    <button data-choice="c">1929</button>
+    <button data-choice="d">1930</button>
+  </div>
+
+  <div class="question" data-answer="b">
+    <p>When working from an aerial lift, OSHA requires a ?.</p>
+    <button data-choice="a">Flame-retardant shirt</button>
+    <button data-choice="b">Full body harness with lanyard</button>
+    <button data-choice="c">Long-sleeved shirt</button>
+    <button data-choice="d">Leather gloves</button>
+  </div>
+
+  <div class="question" data-answer="c">
+    <p>A body belt with a pole strap is a fall ? system.</p>
+    <button data-choice="a">Arrest</button>
+    <button data-choice="b">Attachment</button>
+    <button data-choice="c">Restraint</button>
+    <button data-choice="d">Suspense</button>
+  </div>
+
+</section>
+    <section id="lesson-9">
+  <h2>Lesson 9 – Electrical Hazards</h2>
+
+  <script>
+    function checkAnswer(group, correct) {
+      const buttons = document.querySelectorAll(`[data-group="${group}"]`);
+      buttons.forEach(btn => {
+        btn.classList.remove("correct", "wrong");
+        if (btn.dataset.answer === correct) {
+          btn.classList.add("correct");
+        } else if (btn.checked) {
+          btn.classList.add("wrong");
+        }
+      });
+    }
+  </script>
+
+  <style>
+    .answers label {
+      display: block;
+      padding: 6px;
+      margin: 4px 0;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    .correct {
+      background-color: #c8f7c5;
+      border-color: green;
+    }
+    .wrong {
+      background-color: #f7c5c5;
+      border-color: red;
+    }
+  </style>
+
+  <!-- QUESTION 1 -->
+  <div class="question">
+    <p>1. Electricity, as a hazard, exposes workers to electric shock, electrocution, and ?</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_1" data-group="q9_1" data-answer="a" onclick="checkAnswer('q9_1','a')"> a. explosions</label>
+      <label><input type="radio" name="q9_1" data-group="q9_1" data-answer="b"> b. exposure incidents</label>
+      <label><input type="radio" name="q9_1" data-group="q9_1" data-answer="c"> c. oxygen-deficient atmosphere</label>
+      <label><input type="radio" name="q9_1" data-group="q9_1" data-answer="d"> d. suffocation</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 2 -->
+  <div class="question">
+    <p>2. In 2014, what ratio of construction worker injuries resulted in death?</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_2" data-group="q9_2" data-answer="a" onclick="checkAnswer('q9_2','a')"> a. 1 out of 5</label>
+      <label><input type="radio" name="q9_2" data-group="q9_2" data-answer="b"> b. 1 out of 50</label>
+      <label><input type="radio" name="q9_2" data-group="q9_2" data-answer="c"> c. 1 out of 100</label>
+      <label><input type="radio" name="q9_2" data-group="q9_2" data-answer="d"> d. 1 out of 1,000</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 3 -->
+  <div class="question">
+    <p>3. A common and sometimes overlooked conductor is the surface or subsurface of ?</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_3" data-group="q9_3" data-answer="a"> a. anchor plates</label>
+      <label><input type="radio" name="q9_3" data-group="q9_3" data-answer="b"> b. poles</label>
+      <label><input type="radio" name="q9_3" data-group="q9_3" data-answer="c"> c. substation bus work</label>
+      <label><input type="radio" name="q9_3" data-group="q9_3" data-answer="d" onclick="checkAnswer('q9_3','d')"> d. the earth</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 4 -->
+  <div class="question">
+    <p>4. Dry skin has a fairly high ? to electric current.</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_4" data-group="q9_4" data-answer="a"> a. connection</label>
+      <label><input type="radio" name="q9_4" data-group="q9_4" data-answer="b"> b. inductance</label>
+      <label><input type="radio" name="q9_4" data-group="q9_4" data-answer="c"> c. reactance</label>
+      <label><input type="radio" name="q9_4" data-group="q9_4" data-answer="d" onclick="checkAnswer('q9_4','d')"> d. resistance</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 5 -->
+  <div class="question">
+    <p>5. Four factors that determine the severity of an electric shock are current amount, path, frequency, and ?</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_5" data-group="q9_5" data-answer="a"> a. ambient temperature/humidity</label>
+      <label><input type="radio" name="q9_5" data-group="q9_5" data-answer="b"> b. amount of voltage</label>
+      <label><input type="radio" name="q9_5" data-group="q9_5" data-answer="c" onclick="checkAnswer('q9_5','c')"> c. length of time it flows</label>
+      <label><input type="radio" name="q9_5" data-group="q9_5" data-answer="d"> d. quality of contact to ground</label>
+    </div>
+  </div>
+  <!-- QUESTION 6 -->
+  <div class="question">
+    <p>6. Slight shock felt; not painful but disturbing. Average individual can let go.</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_6" data-group="q9_6" data-answer="a" onclick="checkAnswer('q9_6','a')"> a. 5 mA</label>
+      <label><input type="radio" name="q9_6" data-group="q9_6" data-answer="b"> b. 15 mA</label>
+      <label><input type="radio" name="q9_6" data-group="q9_6" data-answer="c"> c. 20 mA</label>
+      <label><input type="radio" name="q9_6" data-group="q9_6" data-answer="d"> d. 30 mA</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 7 -->
+  <div class="question">
+    <p>7. Extreme pain, respiratory arrest, severe muscular contractions. Death is possible.</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_7" data-group="q9_7" data-answer="a"> a. 6.3</label>
+      <label><input type="radio" name="q9_7" data-group="q9_7" data-answer="b"> b. 12.6</label>
+      <label><input type="radio" name="q9_7" data-group="q9_7" data-answer="c"> c. 25</label>
+      <label><input type="radio" name="q9_7" data-group="q9_7" data-answer="d" onclick="checkAnswer('q9_7','d')"> d. 50</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 8 -->
+  <div class="question">
+    <p>8. An electrical accident can result in ? such as electrical, arc, or thermal.</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_8" data-group="q9_8" data-answer="a" onclick="checkAnswer('q9_8','a')"> a. burns</label>
+      <label><input type="radio" name="q9_8" data-group="q9_8" data-answer="b"> b. explosions</label>
+      <label><input type="radio" name="q9_8" data-group="q9_8" data-answer="c"> c. HAZMAT conditions</label>
+      <label><input type="radio" name="q9_8" data-group="q9_8" data-answer="d"> d. mechanical failure</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 9 -->
+  <div class="question">
+    <p>9. During an electrical shock, the ? often causes the muscles to contract.</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_9" data-group="q9_9" data-answer="a" onclick="checkAnswer('q9_9','a')"> a. electrical stimulation</label>
+      <label><input type="radio" name="q9_9" data-group="q9_9" data-answer="b"> b. environmental condition</label>
+      <label><input type="radio" name="q9_9" data-group="q9_9" data-answer="c"> c. location of the exit wound</label>
+      <label><input type="radio" name="q9_9" data-group="q9_9" data-answer="d"> d. moisture content of the skin</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 10 -->
+  <div class="question">
+    <p>10. Electrical shocks can cause involuntary muscle reactions resulting in injuries from collisions or ?</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_10" data-group="q9_10" data-answer="a"> a. blindness</label>
+      <label><input type="radio" name="q9_10" data-group="q9_10" data-answer="b" onclick="checkAnswer('q9_10','b')"> b. falls</label>
+      <label><input type="radio" name="q9_10" data-group="q9_10" data-answer="c"> c. lockjaw</label>
+      <label><input type="radio" name="q9_10" data-group="q9_10" data-answer="d"> d. nerve spasticity</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 11 -->
+  <div class="question">
+    <p>11. A victim of a severe shock may suffer injuries that are not ?</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_11" data-group="q9_11" data-answer="a"> a. life threatening</label>
+      <label><input type="radio" name="q9_11" data-group="q9_11" data-answer="b" onclick="checkAnswer('q9_11','b')"> b. readily visible</label>
+      <label><input type="radio" name="q9_11" data-group="q9_11" data-answer="c"> c. treatable</label>
+      <label><input type="radio" name="q9_11" data-group="q9_11" data-answer="d"> d. very serious</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 12 -->
+  <div class="question">
+    <p>12. Most electrical accidents result from unsafe equipment, environment, and work practices.</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_12" data-group="q9_12" data-answer="true" onclick="checkAnswer('q9_12','true')"> True</label>
+      <label><input type="radio" name="q9_12" data-group="q9_12" data-answer="false"> False</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 13 -->
+  <div class="question">
+    <p>13. Grounding does not guarantee you will not get a shock.</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_13" data-group="q9_13" data-answer="true" onclick="checkAnswer('q9_13','true')"> True</label>
+      <label><input type="radio" name="q9_13" data-group="q9_13" data-answer="false"> False</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 14 -->
+  <div class="question">
+    <p>14. Components that open a circuit during a ground fault are ?</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_14" data-group="q9_14" data-answer="a" onclick="checkAnswer('q9_14','a')"> a. fuses and circuit breakers</label>
+      <label><input type="radio" name="q9_14" data-group="q9_14" data-answer="b"> b. fuses and tap changers</label>
+      <label><input type="radio" name="q9_14" data-group="q9_14" data-answer="c"> c. sectionalizers</label>
+      <label><input type="radio" name="q9_14" data-group="q9_14" data-answer="d"> d. transformers</label>
+    </div>
+  </div>
+
+  <!-- QUESTION 15 -->
+  <div class="question">
+    <p>15. Devices that interrupt current within 1/40th of a second are called ?</p>
+    <div class="answers">
+      <label><input type="radio" name="q9_15" data-group="q9_15" data-answer="a"> a. air-blast breakers</label>
+      <label><input type="radio" name="q9_15" data-group="q9_15" data-answer="b" onclick="checkAnswer('q9_15','b')"> b. GFCIs</label>
+      <label><input type="radio" name="q9_15" data-group="q9_15" data-answer="c"> c. oil-filled breakers</label>
+      <label><input type="radio" name="q9_15" data-group="q9_15" data-answer="d"> d. reclosers</label>
+    </div>
+  </div>
+</section>
+    <!-- QUESTION 16 -->
+<div class="question">
+  <p>16. A properly installed grounding conductor greatly reduces the amount of ?</p>
   <div class="answers">
-    <label><input type="radio" name="q3" value="a"> Best value</label>
-    <label><input type="radio" name="q3" value="b"> Most popular brand</label>
-    <label><input type="radio" name="q3" value="c"> Most suitable for intended work</label>
-    <label><input type="radio" name="q3" value="d"> Use by other crew members</label>
+    <label><input type="radio" name="q9_16" data-group="q9_16" data-answer="a" onclick="checkAnswer('q9_16','a')"> a. current passing through the body</label>
+    <label><input type="radio" name="q9_16" data-group="q9_16" data-answer="b"> b. current that passes to ground</label>
+    <label><input type="radio" name="q9_16" data-group="q9_16" data-answer="c"> c. current the circuit can carry</label>
+    <label><input type="radio" name="q9_16" data-group="q9_16" data-answer="d"> d. resistance to electrical current</label>
   </div>
 </div>
 
-<!-- ================= SCRIPT ================= -->
+<!-- QUESTION 17 -->
+<div class="question">
+  <p>17. Conductors not properly deenergized must be treated as ?</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_17" data-group="q9_17" data-answer="a"> a. a hazard</label>
+    <label><input type="radio" name="q9_17" data-group="q9_17" data-answer="b"> b. conductive</label>
+    <label><input type="radio" name="q9_17" data-group="q9_17" data-answer="c" onclick="checkAnswer('q9_17','c')"> c. energized</label>
+    <label><input type="radio" name="q9_17" data-group="q9_17" data-answer="d"> d. isolated</label>
+  </div>
+</div>
+
+<!-- QUESTION 18 -->
+<div class="question">
+  <p>18. Employers must provide protective equipment when electrical hazards exist.</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_18" data-group="q9_18" data-answer="true" onclick="checkAnswer('q9_18','true')"> True</label>
+    <label><input type="radio" name="q9_18" data-group="q9_18" data-answer="false"> False</label>
+  </div>
+</div>
+
+<!-- QUESTION 19 -->
+<div class="question">
+  <p>19. All employees working with electrical power must be trained in safety practices.</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_19" data-group="q9_19" data-answer="true" onclick="checkAnswer('q9_19','true')"> True</label>
+    <label><input type="radio" name="q9_19" data-group="q9_19" data-answer="false"> False</label>
+  </div>
+</div>
+
+<!-- QUESTION 20 -->
+<div class="question">
+  <p>20. The person responsible for a clearance is the ?</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_20" data-group="q9_20" data-answer="a" onclick="checkAnswer('q9_20','a')"> a. designated employee who requested the clearance</label>
+    <label><input type="radio" name="q9_20" data-group="q9_20" data-answer="b"> b. division manager</label>
+    <label><input type="radio" name="q9_20" data-group="q9_20" data-answer="c"> c. general foreman</label>
+    <label><input type="radio" name="q9_20" data-group="q9_20" data-answer="d"> d. working foreman</label>
+  </div>
+</div>
+
+<!-- QUESTION 21 -->
+<div class="question">
+  <p>21. Grounding jumpers must be ?</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_21" data-group="q9_21" data-answer="a"> a. insulated to line voltage</label>
+    <label><input type="radio" name="q9_21" data-group="q9_21" data-answer="b"> b. four-conductor tinned copper</label>
+    <label><input type="radio" name="q9_21" data-group="q9_21" data-answer="c"> c. no larger than 4 AWG</label>
+    <label><input type="radio" name="q9_21" data-group="q9_21" data-answer="d" onclick="checkAnswer('q9_21','d')"> d. sized to carry max fault current</label>
+  </div>
+</div>
+
+<!-- QUESTION 22 -->
+<div class="question">
+  <p>22. Breakers required in wet locations must be ? type.</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_22" data-group="q9_22" data-answer="a"> a. AFCI</label>
+    <label><input type="radio" name="q9_22" data-group="q9_22" data-answer="b" onclick="checkAnswer('q9_22','b')"> b. GFCI</label>
+    <label><input type="radio" name="q9_22" data-group="q9_22" data-answer="c"> c. GFI</label>
+    <label><input type="radio" name="q9_22" data-group="q9_22" data-answer="d"> d. GFPP</label>
+  </div>
+</div>
+
+<!-- QUESTION 23 -->
+<div class="question">
+  <p>23. GFCIs shut off power with as little as ?</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_23" data-group="q9_23" data-answer="a" onclick="checkAnswer('q9_23','a')"> a. 5 mA</label>
+    <label><input type="radio" name="q9_23" data-group="q9_23" data-answer="b"> b. 10 mA</label>
+    <label><input type="radio" name="q9_23" data-group="q9_23" data-answer="c"> c. 15 mA</label>
+    <label><input type="radio" name="q9_23" data-group="q9_23" data-answer="d"> d. 20 mA</label>
+  </div>
+</div>
+
+<!-- QUESTION 24 -->
+<div class="question">
+  <p>24. Single insulation tools are adequate shock protection.</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_24" data-group="q9_24" data-answer="true"> True</label>
+    <label><input type="radio" name="q9_24" data-group="q9_24" data-answer="false" onclick="checkAnswer('q9_24','false')"> False</label>
+  </div>
+</div>
+
+<!-- QUESTION 25 -->
+<div class="question">
+  <p>25. A short circuit caused by earth contact is a ? fault.</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_25" data-group="q9_25" data-answer="a" onclick="checkAnswer('q9_25','a')"> a. ground</label>
+    <label><input type="radio" name="q9_25" data-group="q9_25" data-answer="b"> b. isolation</label>
+    <label><input type="radio" name="q9_25" data-group="q9_25" data-answer="c"> c. phase-to-phase</label>
+    <label><input type="radio" name="q9_25" data-group="q9_25" data-answer="d"> d. system</label>
+  </div>
+</div>
+
+<!-- QUESTION 26 -->
+<div class="question">
+  <p>26. A voltage ? may be set up at the base of a pole.</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_26" data-group="q9_26" data-answer="a"> a. circuit</label>
+    <label><input type="radio" name="q9_26" data-group="q9_26" data-answer="b"> b. corona path</label>
+    <label><input type="radio" name="q9_26" data-group="q9_26" data-answer="c"> c. geometric path</label>
+    <label><input type="radio" name="q9_26" data-group="q9_26" data-answer="d" onclick="checkAnswer('q9_26','d')"> d. gradient</label>
+  </div>
+</div>
+
+<!-- QUESTION 27 -->
+<div class="question">
+  <p>27. One form of protection from step potential is grounding vehicles ?</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_27" data-group="q9_27" data-answer="a"> a. individually</label>
+    <label><input type="radio" name="q9_27" data-group="q9_27" data-answer="b"> b. near outriggers</label>
+    <label><input type="radio" name="q9_27" data-group="q9_27" data-answer="c"> c. on neutral</label>
+    <label><input type="radio" name="q9_27" data-group="q9_27" data-answer="d" onclick="checkAnswer('q9_27','d')"> d. together</label>
+  </div>
+</div>
+
+<!-- QUESTION 28 -->
+<div class="question">
+  <p>28. Best ground source for boom truck grounding is a ?</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_28" data-group="q9_28" data-answer="a"> a. down guy wire</label>
+    <label><input type="radio" name="q9_28" data-group="q9_28" data-answer="b"> b. temporary rod</label>
+    <label><input type="radio" name="q9_28" data-group="q9_28" data-answer="c" onclick="checkAnswer('q9_28','c')"> c. permanent ground network</label>
+    <label><input type="radio" name="q9_28" data-group="q9_28" data-answer="d"> d. sandy soil rod</label>
+  </div>
+</div>
+
+<!-- QUESTION 29 -->
+<div class="question">
+  <p>29. When a vehicle contacts a live conductor, workers should ? the vehicle.</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_29" data-group="q9_29" data-answer="a"> a. move</label>
+    <label><input type="radio" name="q9_29" data-group="q9_29" data-answer="b"> b. operate controls</label>
+    <label><input type="radio" name="q9_29" data-group="q9_29" data-answer="c"> c. quickly ground</label>
+    <label><input type="radio" name="q9_29" data-group="q9_29" data-answer="d" onclick="checkAnswer('q9_29','d')"> d. stay away from</label>
+  </div>
+</div>
+
+<!-- QUESTION 30 -->
+<div class="question">
+  <p>30. Grounding a vehicle to the ? promotes fast trip-out.</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_30" data-group="q9_30" data-answer="a" onclick="checkAnswer('q9_30','a')"> a. neutral</label>
+    <label><input type="radio" name="q9_30" data-group="q9_30" data-answer="b"> b. other vehicles</label>
+    <label><input type="radio" name="q9_30" data-group="q9_30" data-answer="c"> c. pole ground</label>
+    <label><input type="radio" name="q9_30" data-group="q9_30" data-answer="d"> d. vehicle frame</label>
+  </div>
+</div>
+
+<!-- QUESTION 31 -->
+<div class="question">
+  <p>31. A frequent hazard involves improperly connected ?</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_31" data-group="q9_31" data-answer="a"> a. lighting</label>
+    <label><input type="radio" name="q9_31" data-group="q9_31" data-answer="b"> b. breakers</label>
+    <label><input type="radio" name="q9_31" data-group="q9_31" data-answer="c" onclick="checkAnswer('q9_31','c')"> c. terminals</label>
+    <label><input type="radio" name="q9_31" data-group="q9_31" data-answer="d"> d. ventilation</label>
+  </div>
+</div>
+
+<!-- QUESTION 32 -->
+<div class="question">
+  <p>32. Wet cord connectors can cause hazardous ?</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_32" data-group="q9_32" data-answer="a" onclick="checkAnswer('q9_32','a')"> a. electrical leakage</label>
+    <label><input type="radio" name="q9_32" data-group="q9_32" data-answer="b"> b. shunt</label>
+    <label><input type="radio" name="q9_32" data-group="q9_32" data-answer="c"> c. electrolysis</label>
+    <label><input type="radio" name="q9_32" data-group="q9_32" data-answer="d"> d. grounding</label>
+  </div>
+</div>
+
+<!-- QUESTION 33 -->
+<div class="question">
+  <p>33. Who is responsible for providing GFCIs on construction sites?</p>
+  <div class="answers">
+    <label><input type="radio" name="q9_33" data-group="q9_33" data-answer="a"> a. customer</label>
+    <label><input type="radio" name="q9_33" data-group="q9_33" data-answer="b" onclick="checkAnswer('q9_33','b')"> b. employer</label>
+    <label><input type="radio" name="q9_33" data-group="q9_33" data-answer="c"> c. inspector</label>
+    <label><input type="radio" name="q9_33" data-group="q9_33" data-answer="d"> d. superintendent</label>
+  </div>
+</div>
+<h2>Lesson 10</h2>
+
+<div class="question">
+<p>Everyone, except qualified employees, must stay at least   ?   from apparatus energized up to 50,000 volts.</p>
+<div class="answers">
+<button data-answer="a" onclick="checkAnswer(this,'d')">a. 4'</button>
+<button data-answer="b" onclick="checkAnswer(this,'d')">b. 6'</button>
+<button data-answer="c" onclick="checkAnswer(this,'d')">c. 8'</button>
+<button data-answer="d" onclick="checkAnswer(this,'d')">d. 10'</button>
+</div>
+</div>
+
+<div class="question">
+<p>A qualified worker must be trained and have the ability to recognize   ?  .</p>
+<div class="answers">
+<button data-answer="a" onclick="checkAnswer(this,'a')">a. energized parts</button>
+<button data-answer="b" onclick="checkAnswer(this,'a')">b. grounded lines</button>
+<button data-answer="c" onclick="checkAnswer(this,'a')">c. hazardous situations</button>
+<button data-answer="d" onclick="checkAnswer(this,'a')">d. various protective devices</button>
+</div>
+</div>
+
+<div class="question">
+<p>A qualified individual understands that all conductors must be   ?  .</p>
+<div class="answers">
+<button data-answer="a" onclick="checkAnswer(this,'a')">a. considered energized until proven to be otherwise</button>
+<button data-answer="b" onclick="checkAnswer(this,'a')">b. grounded before testing for voltage</button>
+<button data-answer="c" onclick="checkAnswer(this,'a')">c. tested for continuity before energizing</button>
+<button data-answer="d" onclick="checkAnswer(this,'a')">d. tested twice to verify voltage</button>
+</div>
+</div>
+
+<div class="question">
+<p>The normal operating voltage of electrical equipment must be determined by workers   ?  .</p>
+<div class="answers">
+<button data-answer="a" onclick="checkAnswer(this,'a')">a. before work begins</button>
+<button data-answer="b" onclick="checkAnswer(this,'a')">b. from previous knowledge</button>
+<button data-answer="c" onclick="checkAnswer(this,'a')">c. when it is convenient to do so</button>
+<button data-answer="d" onclick="checkAnswer(this,'a')">d. while work is in progress</button>
+</div>
+</div>
+
+<div class="question">
+<p>Objects that are (insulated) from ground are   ?  .</p>
+<div class="answers">
+<button data-answer="a" onclick="checkAnswer(this,'a')">a. conductive and can be expected to be energized</button>
+<button data-answer="b" onclick="checkAnswer(this,'a')">b. considered grounded</button>
+<button data-answer="c" onclick="checkAnswer(this,'a')">c. protected from an overvoltage event</button>
+<button data-answer="d" onclick="checkAnswer(this,'a')">d. safe to handle</button>
+</div>
+</div>
+
+<div class="question">
+<p>Conductors are the part of an electrical system that carries electrical current.</p>
+<div class="answers">
+<button data-answer="true" onclick="checkAnswer(this,'true')">True</button>
+<button data-answer="false" onclick="checkAnswer(this,'true')">False</button>
+</div>
+</div>
+
+<div class="question">
+<p>Electrical circuits may be in a(n)   ?   configuration.</p>
+<div class="answers">
+<button data-answer="a" onclick="checkAnswer(this,'d')">a. conductive</button>
+<button data-answer="b" onclick="checkAnswer(this,'d')">b. inductive or capacitive</button>
+<button data-answer="c" onclick="checkAnswer(this,'d')">c. transformation</button>
+<button data-answer="d" onclick="checkAnswer(this,'d')">d. wye or delta</button>
+</div>
+</div>
+
+<div class="question">
+<p>The neutral conductors are normally connected to the   ?  .</p>
+<div class="answers">
+<button data-answer="a" onclick="checkAnswer(this,'a')">a. ground</button>
+<button data-answer="b" onclick="checkAnswer(this,'a')">b. guy wires</button>
+<button data-answer="c" onclick="checkAnswer(this,'a')">c. insulators</button>
+<button data-answer="d" onclick="checkAnswer(this,'a')">d. lightning arresters</button>
+</div>
+</div>
+
+<div class="question">
+<p>The parts of an electrical system used to isolate conductive (energized) material from other parts are called   ?  .</p>
+<div class="answers">
+<button data-answer="a" onclick="checkAnswer(this,'b')">a. grounded devices</button>
+<button data-answer="b" onclick="checkAnswer(this,'b')">b. insulators</button>
+<button data-answer="c" onclick="checkAnswer(this,'b')">c. protective devices</button>
+<button data-answer="d" onclick="checkAnswer(this,'b')">d. stand offs</button>
+</div>
+</div>
+
+<div class="question">
+<p>The operating voltage of an insulator can be determined by the   ?  , its length, or its height.</p>
+<div class="answers">
+<button data-answer="a" onclick="checkAnswer(this,'b')">a. insulators’ material make-up</button>
+<button data-answer="b" onclick="checkAnswer(this,'b')">b. number of layers (skirts)</button>
+<button data-answer="c" onclick="checkAnswer(this,'b')">c. pin type</button>
+<button data-answer="d" onclick="checkAnswer(this,'b')">d. support design</button>
+</div>
+</div>
+<div class="question">
+  <p>The piece of equipment used to step the voltage up or down in an electrical system is called a   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. capacitor</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. regulator</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. transformer</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. transmission line</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>When a voltage condition occurs that is higher than the designed voltage for the system, a(n)   ?   becomes a path to ground.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. arrester</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. capacitor</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. switching station</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. transformer</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Guy wires cannot become energized because they are tied to rods in the earth.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The connection point between an underground cable and an overhead conductor is normally made through a   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. capacitor</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. pothead</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. splice</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. transit point</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Ways to determine the actual operating voltage of a power line include asking an authorized company representative, observing nameplate information, and   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. checking the size of insulators</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. fuzzing the line</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. tracing the line back to the substation</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. using test instruments</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The approach distance to a 12,000-volt line phase-to-phase is   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. 2' 2"</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. 2' 7"</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. 2' 10"</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. 3' 6"</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The electrical factor distance and human factor distance are also called the   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. design factor difference</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. minimum approach distance</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. minimum insulator factor</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. nominal factor distance</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The term nominal voltage means the   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. average voltage on a circuit</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. highest voltage a circuit carries</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. lowest voltage a circuit normally carries</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. normal operating voltage</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>A Qualified Electrical Worker must be   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. able to determine the nominal voltage of exposed live parts</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. part of a random drug/alcohol testing program</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. physically fit for the job</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. trained by the IBEW</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Most electrical conductors are made of copper, aluminum, or   ?   in older systems.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. brass</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. nickel</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. silver</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. steel</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The device used to automatically raise or lower the primary voltage of a line to ensure its optimal voltage range is a   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. breaker</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. recloser</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. regulator</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. transformer</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>A capacitor stores electrical energy.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Insulators installed in guy wires are intended to protect   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. a climber from making a ground contact</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. people and equipment on the ground</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. the ground rod from electrolysis</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. the pole or structure from becoming energized</button>
+  </div>
+</div>
+    <div class="question">
+  <p>Climbing equipment should be inspected   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. before and after each use</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. monthly or at first sign of damage</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. every six months</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. yearly</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Whose responsibility is it to inspect the climbing equipment?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. Job Safety Director</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. Manufacturer</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. Supervisor</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. User</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Modifying equipment to personal specifications is acceptable.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>When the contrasting color of the internal layer of a pole strap becomes visible, the strap should be   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. recycled</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. refurbished</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. replaced</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. resized</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>To get the best performance from climbers, the gaffs must be properly   ?   and   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. filed / sharpened</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. honed / sized</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. sized / shaped</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. None of the above</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>A   ?   must be used to properly maintain and shape the gaff.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. clamp and blocks</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. gaff gauge</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. smooth single cut file</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. stoning hone</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Climbers should be inspected immediately if there is an unusual “feel” or   ?   while climbing.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. a cutout occurs</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. a foot strap breaks</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. a slowdown in speed occurs</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. the gaff does not penetrate pole rot</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>When should gaff guards be used on climbers?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. Anytime the climbers are not in use</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. Only when handling climbers in the field</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. Only when transporting climbers</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. When walking to the pole</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>When properly sharpened, the gaff tip contour should function as a   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. chisel</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. fulcrum</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. needle point</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. spike</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The purpose of gaff guards is to protect the user from injury and climber damage.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Which file type is recommended for gaff filing?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. Half round file</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. Honing stone</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. Round single cut file</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. Smooth single cut file</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Minimal damage to the gaff should be repaired using a   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. half round file</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. honing stone</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. round single</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. smooth single cut file</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>A radius tip is critical for gaff penetration.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Why is it important to have a properly shaped gaff?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. To climb efficiently</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. To prevent cutouts</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. To prevent the risk of injury</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. All of the above</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>What should be done with a gaff that measures less than 1 1/4 inch?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. Climb with gaff</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. Decrease leg angle to 20°</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. Discard and replace gaff</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. Reshape gaff</button>
+  </div>
+</div>
+    <div class="question">
+  <p>What should be taken into account when inspecting climber straps and pads?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. Excessive wear</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. Loose or broken stitching</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. Loose or missing rivets</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. All of the above</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>What can be done to ensure even filing?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. Color gaff tip with black marker</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. Eye gaff tip</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. Measure gaff tip after each file</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. Test gaff tip by jabbing into wood</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>When inspecting a body belt, the user should look for   ?  .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. cuts, excessive wear</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. loose stitching, worn outer strap</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. rust or corrosion</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. all the above</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Body belt attachments’ points shall be no less than   ?   from the back of the D-ring circle.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. 1"</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. 3"</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. 5"</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. 6"</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Body belts are sized by what measurement?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. Body size</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. D-size</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. Pant size</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. Waist size</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>How is D-size measured?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. Around the circumference of the hips</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. Around the circumference of the waist</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. Hip bone to hip bone</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. Pant Size</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Leather parts of any climbing equipment should be   ?   and   ?   regularly, to extend its life.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. cleaned / conditioned with the manufacturer's recommended cleaner</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. cleaned / washed with high pressure</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. washed / lubricated with spray lubricant</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. washed / sun dried</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>If red warning core is exposed, then the positioning strap should be destroyed and replaced.</p>
+  <div class="answers">
+    <button data-answer="true" onclick="checkAnswer(this,'true')">True</button>
+    <button data-answer="false" onclick="checkAnswer(this,'true')">False</button>
+  </div>
+</div>
+    <div class="question">
+  <p>Beginning April 1, 2015, qualified workers must use fall protection while climbing or changing locations on poles, towers, or similar structures.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>OSHA will require all fall arrest equipment to pass a drop test after it is ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. abraded</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. arc tested</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. cut</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. shock loaded</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Work positioning equipment must meet the electric arc exposure requirements.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>When selecting equipment, the Qualified Electrical Worker should make the selection based on ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. best value</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. most popular brand</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. most suitable for intended work</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. use by other crew members</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>To minimize the chance of injury in the event of a fall, lanyards should be kept ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. as short as possible</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. wherever available</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. wherever cheapest</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. where most suitable for intended work</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>A ? system is a barrier erected to prevent employees from falling to lower levels.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. cover</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. kickboard</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. guardrail</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. tape and flagging</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>What is the OSHA specified maximum length a worker can fall while using a lanyard?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. 2'</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. 4'</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. 6'</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. 12'</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Personal fall arrest systems, work-positioning equipment, or fall restraint systems must be used when an employee is working on a pole, tower, or similar structure more than ? above the ground.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. 2'</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. 4'</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. 6'</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. 8'</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>A system that consists of an anchorage, connectors, and body harness, and includes a lanyard/deceleration device, lifeline, or combination thereof, is called a personal fall arrest system.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Tree branches, utility line conductors, cables, tower legs, cross bracing, and lattice work are considered lower levels by OSHA.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>According to OSHA, a fall arrest system should be rigged so that a worker cannot free fall more than ? nor contact any lower level.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. 2'</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. 4'</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. 6'</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. 8'</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>D-rings and snap hooks used for fall protection must have a minimum tensile strength of ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. 1,000 lbs</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. 3,000 lbs</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. 5,000 lbs</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. 10,000 lbs</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>When working from an aerial lift, a fall restraint or personal fall arrest system shall be used.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>OSHA specifies that the maximum length of a lanyard shall provide for a fall of no greater than ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. 0'</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. 2'</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. 4'</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. 6'</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>With a work positioning system, a worker can fall ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. 0'</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. 2'</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. 4'</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. 6'</button>
+  </div>
+</div>
+    <div class="question">
+  <p>A work positioning device cannot be used while climbing step bolts on a concrete or steel pole.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Guardrail systems used to meet the requirement of fall protection shall be constructed with a rail height of ? , plus or minus three inches.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. 30"</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. 36"</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. 42"</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. 48"</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>It is proper procedure to hook a snaphook to another snaphook.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Guardrails must be capable of withstanding a ? downward and outward force applied within two inches from the top rail at any point along the top edge.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. 150-lb</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. 200-lb</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. 250-lb</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. 300-lb</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Who can modify equipment?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. Manufacturer</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. Supervisor</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. Worker</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. All of the above</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Avoid rubbing fall protection equipment on ? and ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. abrasive surfaces / sharp edges</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. chemically treated surfaces / rusted edges</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. extremely heated surfaces / corrosive materials</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. weathered materials / jagged structures</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Equipment subjected to impact loading should be ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. inspected daily</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. removed from service and destroyed/discarded</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. used as long as it passes inspection</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. none of the above</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>To ensure that a snaphook is fully engaged, a worker should ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. feel the snaphook to ensure engagement</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. listen for the locking sound</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. perform a weight load test</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. visually inspect it</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>If attaching a personal fall arrest system directly to a web loop, the web loop must be ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. carefully inspected for abrasions, broken strands or excessive wear</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. clear of any burns, chars or cuts within the material</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. properly secured without broken stitches/strands</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. all of the above</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The keeper/gate of the snap hook should be positioned so that it is never load bearing.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Warning lines, used in warning line systems, shall be erected at least ? from the roof edge when no mechanical equipment is being used.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. 6'</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. 7'</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. 7 1/2'</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. 8'</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Fall arrest anchor points must support a minimum of ? per attached worker and be independent of worker support.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. 4,000 lbs</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. 5,000 lbs</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. 7,000 lbs</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. 8,000 lbs</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>For fall arrest, the anchor point should always be kept ? the rear fall arrest attachment.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. above</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. below</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. diagonally to</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. perpendicular to</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Side D-rings are not intended for fall arrest.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Positioning side D-rings are intended for attachment of ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. connecting device only</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. fall arrest only</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. rescue device only</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. work positioning only</button>
+  </div>
+</div>
+    <div class="question">
+  <p>The sternal D-ring is for fall attachment when likely fall distance is not greater than ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">a. 1'</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">b. 2'</button>
+    <button data-answer="c" onclick="checkAnswer(this,'b')">c. 3'</button>
+    <button data-answer="d" onclick="checkAnswer(this,'b')">d. 4'</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>When using the safety monitor program, a competent person has to be close enough to the workers that they can ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. communicate orally with the workers</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. monitor the work procedures</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. observe the work being conducted</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. summon help if needed</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The dorsal D-ring, pigtail D-ring, or web loop are the ? for ? attachment.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. primary / fall arrest</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. primary / work positioning</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. secondary / fall arrest</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. secondary / work positioning</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The OSHA fall protection standard does not contain training requirements.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Shoulder D-rings can be used for fall arrest.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>The suspension bridge is only used for ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. fall arrest</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. rescue</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. travel restraint</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. work positioning</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>To comply with OSHA’s requirement that impact force of a fall shall not exceed 1,800 pounds of force, a harness should be used with a deceleration unit.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>If a harness shows signs of minimal fraying, it should be discarded.</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'b')">True</button>
+    <button data-answer="b" onclick="checkAnswer(this,'b')">False</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>A harness should be immediately removed from service if there are ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'d')">a. broken fibers</button>
+    <button data-answer="b" onclick="checkAnswer(this,'d')">b. cuts in webbing</button>
+    <button data-answer="c" onclick="checkAnswer(this,'d')">c. leather strength components</button>
+    <button data-answer="d" onclick="checkAnswer(this,'d')">d. any of the above</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>If hardware is bent on a harness, then the Qualified Electrical Worker should ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. discard the harness</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. rebend the hardware</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. replace the hardware</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. use the harness, if not severely bent</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>Where should lanyards be attached on harnesses?</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'c')">a. Front at sternum level</button>
+    <button data-answer="b" onclick="checkAnswer(this,'c')">b. Lower back by the waist</button>
+    <button data-answer="c" onclick="checkAnswer(this,'c')">c. Middle back near shoulder blades</button>
+    <button data-answer="d" onclick="checkAnswer(this,'c')">d. Work positioning D-ring</button>
+  </div>
+</div>
+
+<div class="question">
+  <p>A fall arrest attachment with a web loop must be attached to a harness with a ? or a ? .</p>
+  <div class="answers">
+    <button data-answer="a" onclick="checkAnswer(this,'a')">a. hitch / carabiner</button>
+    <button data-answer="b" onclick="checkAnswer(this,'a')">b. hitch / locking snap hook</button>
+    <button data-answer="c" onclick="checkAnswer(this,'a')">c. hitch / metal connector</button>
+    <button data-answer="d" onclick="checkAnswer(this,'a')">d. none of the above</button>
+  </div>
+</div>
+<!-- ================================================= -->
+<!-- 🔼 DO NOT TOUCH BELOW THIS LINE 🔼 -->
+<!-- ================================================= -->
+
 <script>
-document.querySelectorAll(".question").forEach(question => {
-  const correct = question.dataset.correct;
+function checkAnswer(button, correctIndex) {
+  const buttons = button.parentElement.querySelectorAll("button");
 
-  question.querySelectorAll("input[type=radio]").forEach(input => {
-    input.addEventListener("change", () => {
-
-      // disable all radios in this question
-      question.querySelectorAll("input").forEach(r => r.disabled = true);
-
-      question.querySelectorAll("label").forEach(label => {
-        const radio = label.querySelector("input");
-
-        if (radio.value === correct) {
-          label.classList.add("correct");
-        }
-
-        if (radio.checked && radio.value !== correct) {
-          label.classList.add("wrong");
-        }
-      });
-    });
+  buttons.forEach((btn, index) => {
+    btn.disabled = true;
+    if (index === correctIndex) {
+      btn.classList.add("correct");
+    }
   });
-});
+
+  if (![...buttons].indexOf(button) === correctIndex) {
+    button.classList.add("wrong");
+  }
+}
 </script>
 
 </body>
